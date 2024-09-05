@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+{% for menu in menus %}
+    <h1>
+        {{ loop.index }}
+        {% if loop.index == 2 %}
+            <a href="{{url_for('itemlist')}}">{{ menu }}</a>
+        {% else %}
+            {{ menu }}
+        {% endif %}
+    </h1>
+{% endfor %}
+{% endblock %}
