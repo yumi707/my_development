@@ -1,9 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<h1>アップロード</h1>
-<!-- action属性でどこにデータを送信するかを定義、upload関数を呼び出す -->
-<form action="{{ url_for('upload') }}" method="POST" enctype="multipart/form-data">
-    <input type="file" name="file">
-    <input type="submit" value="アップロード">
-</form>
-{% endblock %}
