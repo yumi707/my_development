@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<p>
+    <ul>
+        <li>商品名：{{ item.product_name }}</li>
+        <li>価格：{{ item.price }}円</li>
+        <li>色：{{ item.color }}</li>
+        <li>送料：{{ item.supplier | check_postage(item.price) }}円</li>
+        <img src="{{ url_for('static',filename=item.picture_pass) }}">
+    </ul>
+</p>
+{% endblock %}
